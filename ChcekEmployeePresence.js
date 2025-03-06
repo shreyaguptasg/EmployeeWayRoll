@@ -105,3 +105,21 @@ const storeWageInMap = () => {
 };
 
 console.log(storeWageInMap());
+
+const wageAndHoursMap = () => {
+  const totalWage = Array.from(dailyWageMap.values()).reduce(
+    (total, wage) => total + wage,
+    0
+  );
+  let fullDays = 0,
+    partDays = 0,
+    noWorkDays = 0;
+  dailyWageMap.forEach((wage) => {
+    if (wage === 160) fullDays++;
+    else if (wage === 80) partDays++;
+    else noWorkDays++;
+  });
+  return { totalWage, fullDays, partDays, noWorkDays };
+};
+
+console.log(wageAndHoursMap());
