@@ -19,3 +19,17 @@ const getDailyWage = () => {
     return empHours * 20;
   };
   console.log(getDailyWage());
+
+  //uc3
+const getWorkHours = () => {
+    let empCheck = Math.floor(Math.random() * 3);
+    switch (empCheck) {
+      case 1:
+        return 4;
+      case 2:
+        return 8;
+      default:
+        return 0;
+    }
+  };
+  console.log(getWorkHours());
