@@ -43,3 +43,18 @@ const calculateMonthlyWage = () => {
     return totalWage;
   };
   console.log(calculateMonthlyWage());
+
+  //uc5
+const calculateWagesTillCondition = () => {
+    let totalWage = 0,
+      totalHours = 0,
+      daysWorked = 0;
+    while (totalHours < 160 && daysWorked < 20) {
+      let dailyWage = getDailyWage();
+      totalWage += dailyWage;
+      totalHours += dailyWage / 20;
+      daysWorked++;
+    }
+    return { totalWage, totalHours, daysWorked };
+  };
+  console.log(calculateWagesTillCondition());
