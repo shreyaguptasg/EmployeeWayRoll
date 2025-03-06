@@ -158,3 +158,7 @@ const workDayOperations = () => {
 };
 
 console.log(workDayOperations());
+
+//uc12
+let employeeData = { id: 1, name: "Niketa", salary: 60000 };
+console.log(employeeData);
