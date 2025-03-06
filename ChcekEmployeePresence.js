@@ -33,3 +33,13 @@ const getWorkHours = () => {
     }
   };
   console.log(getWorkHours());
+
+  //uc4
+const calculateMonthlyWage = () => {
+    let totalWage = 0;
+    for (let i = 0; i < 20; i++) {
+      totalWage += getDailyWage();
+    }
+    return totalWage;
+  };
+  console.log(calculateMonthlyWage());
