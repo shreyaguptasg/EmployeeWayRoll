@@ -67,3 +67,28 @@ const storeDailyWages = () => {
   }
 };
 console.log(storeDailyWages());
+
+//uc7
+const dailyWageOperations = () => {
+  const totalWage = dailyWages.reduce((total, wage) => total + wage, 0);
+  const dayWages = dailyWages.map(
+    (wage, index) => `Day ${index + 1}: $${wage}`
+  );
+  const fullTimeDays = dailyWages.filter((wage) => wage === 160);
+  const firstFullTimeDay = dailyWages.find((wage) => wage === 160);
+  const allFullTime = dailyWages.every((wage) => wage === 160);
+  const anyPartTime = dailyWages.some((wage) => wage === 80);
+  const daysWorked = dailyWages.length;
+
+  return {
+    totalWage,
+    dayWages,
+    fullTimeDays,
+    firstFullTimeDay,
+    allFullTime,
+    anyPartTime,
+    daysWorked,
+  };
+};
+
+console.log(dailyWageOperations());
