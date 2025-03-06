@@ -58,3 +58,12 @@ const calculateWagesTillCondition = () => {
     return { totalWage, totalHours, daysWorked };
   };
   console.log(calculateWagesTillCondition());
+
+  //uc6
+let dailyWages = [];
+const storeDailyWages = () => {
+  for (let i = 0; i < 20; i++) {
+    dailyWages.push(getDailyWage());
+  }
+};
+console.log(storeDailyWages());
