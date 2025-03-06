@@ -92,3 +92,16 @@ const dailyWageOperations = () => {
 };
 
 console.log(dailyWageOperations());
+
+//uc8
+let dailyWageMap = new Map();
+const storeWageInMap = () => {
+  for (let i = 0; i < 20; i++) {
+    dailyWageMap.set(`Day ${i + 1}`, getDailyWage());
+  }
+  let totalWage = 0;
+  dailyWageMap.forEach((wage) => (totalWage += wage));
+  return totalWage;
+};
+
+console.log(storeWageInMap());
