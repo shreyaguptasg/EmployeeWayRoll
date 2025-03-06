@@ -175,3 +175,22 @@ const validateName = (name) => {
 };
 
 console.log(validateName("John Doe")); 
+
+//uc14
+const validateEmployeeData = (id, salary, gender, date) => {
+  const idPattern = /^[1-9][0-9]*$/;
+  const salaryPattern = /^[1-9][0-9]*$/;
+  const genderPattern = /^(M|F)$/;
+  const datePattern = /^(0[1-9]|1[0-9]|2[0-9]|3[01])\/(0[1-9]|1[0-2])\/\d{4}$/;
+  try {
+    if (!idPattern.test(id)) throw "Invalid ID";
+    if (!salaryPattern.test(salary)) throw "Invalid salary";
+    if (!genderPattern.test(gender)) throw "Invalid gender";
+    if (new Date(date) > new Date()) throw "Invalid date";
+    return true;
+  } catch (error) {
+    return error;
+  }
+};
+
+console.log(validateEmployeeData(12345, 50000, "M", "01/01/2022"));
